@@ -10,24 +10,45 @@ public class switcharray {
             System.out.println(num[i]);
         }
     }
-
+    // insert the position
     public void insertatpos(int num[],int n) {
         int pos;
+        
         System.out.println("Enter the positon number that you want to enter: ");
         pos = sc.nextInt();
 
         System.out.println("enter the element: ");
         int ele = sc.nextInt();
-        for (int i = n;n>pos;n--){
-            num[i] = num[i+1];
+
+        if (pos < 0 || pos > n) {
+            System.out.println("Invalid position to insert.");
+            return;
         }
-        num[pos] = ele;
+        int num1[] = new int [n+1];
+        //        while()
+        
+        for (int i = n;n>=pos;i--){
+            num1[i] = ele;
+        }
         n++;
         //printing(num, n);
          System.out.println("Array after the insertion: ");
          for(int i = 0;i<n;i++){
-             System.out.println(num[i]);
+             System.out.println(num1[i]);
          }
+    }
+    // insert at the end 
+    public void insertatend(int num[],int n) {
+        System.out.println("enter the element: ");
+        int ele = sc.nextInt();
+        num[n] = ele;
+        n++;
+        System.out.println("Array after insertion at the end:");
+        for (int i = 0; i < n; i++) {
+            System.out.println(num[i]);
+        }
+        
+
     }
 
 }
