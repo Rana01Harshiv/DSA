@@ -48,7 +48,7 @@ public class stack_operations {
             return;
         }
         else{
-            for(int i = top;top >=0;top--){
+            for(int i = top;top >=0;i--){
                 System.out.println(stckarr[i]);
             }
         }
