@@ -70,6 +70,7 @@ public class student_linked_list {
         Scanner sc = new Scanner(System.in);
         stud_node_create stud_obj = new stud_node_create();
         boolean flag = true;
+        System.out.println("-------Student Managment System--------");
         while(flag){
             System.out.println("1.Push");    
             System.out.println("2.Pop");    
