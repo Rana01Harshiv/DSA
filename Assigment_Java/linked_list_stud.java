@@ -26,6 +26,18 @@ class StudentLinkedList {
         head = null;
     }
     
+    public void insert(int rollno, String name, String email , double percentage) {
+        Student newstStudent = new Student(rollno,name,email,percentage);
+        if(head == null){
+            head = newstStudent;
+        }
+        else{
+            Student temp = head;
+            newstStudent.next = temp;
+            head = newstStudent;
+            System.out.println("Value inserted successfully");
+        }
+    }
     
     public void insertAtLast(int rollNo, String name, String email, double percentage) {
        //object of the student class
@@ -113,6 +125,7 @@ public class linked_list_stud {
 
         while (true) {
             System.out.println("\nStudent Record Management System");
+            System.out.println("0. Insert at Begining");
             System.out.println("1. Insert at Last");
             System.out.println("2. Insert at Position");
             System.out.println("3. Delete by Roll No");
@@ -125,7 +138,7 @@ public class linked_list_stud {
 
             switch (choice) {
 
-                case 1:
+                case 0:
                     System.out.print("Enter Roll No: ");
                     int rollNo = scanner.nextInt();
                     scanner.nextLine(); // Consume the newline character
@@ -135,7 +148,20 @@ public class linked_list_stud {
                     String email = scanner.nextLine();
                     System.out.print("Enter Percentage: ");
                     double percentage = scanner.nextDouble();
-                    studentList.insertAtLast(rollNo, name, email, percentage);
+                    studentList.insert(rollNo,name,email,percentage);
+                    System.out.println("Student record added successfully.");
+                    break;
+                case 1:
+                    System.out.print("Enter Roll No: ");
+                    int rollNo1 = scanner.nextInt();
+                    scanner.nextLine(); // Consume the newline character
+                    System.out.print("Enter Name: ");
+                    String name1 = scanner.nextLine();
+                    System.out.print("Enter Email: ");
+                    String email1 = scanner.nextLine();
+                    System.out.print("Enter Percentage: ");
+                    double percentage1 = scanner.nextDouble();
+                    studentList.insertAtLast(rollNo1, name1, email1, percentage1);
                     System.out.println("Student record added successfully.");
                     break;
                 case 2:

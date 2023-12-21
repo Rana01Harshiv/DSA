@@ -27,7 +27,7 @@ public class switcharray {
         int num1[] = new int [n+1];
         //        while()
         
-        for (int i = n;n>=pos;i--){
+        for (int i = n;i>=pos;i--){
             num1[i] = ele;
         }
         n++;
