@@ -62,7 +62,7 @@ class company{
             return;
         }
         emp current = head;
-        if
+        
     }
 }
 public class exam_linked_list {
