@@ -15,56 +15,6 @@ class node{
     }
 }
 
-public class binarytree1 {
-    
-    public static void main(String[] args) {
-        Scanner sc= new Scanner(System.in);
-        binarytree bt = new binarytree();
-        node root = bt.create(); // call the create method 
-        System.out.println("Binary tree in acesing order: ");
-        
-        int ch;
-        boolean check=true;
-        while(check){
-            
-            System.out.println("---------------------");
-            System.out.println("---Binary Tree Program---");
-            System.out.println("1.Inorder");
-            System.out.println("2.Preorder");
-            System.out.println("3.Postorder");
-            System.out.println("4.Exit");
-            
-            System.out.println("Enter the Choise: ");
-            ch = sc.nextInt();
-            System.out.println("----------------------");
-            
-            switch(ch){
-                case 1:
-                System.out.println("Inorder Display----");
-                bt.inorder(root);
-                break;
-                case 2:
-                System.out.println("Preorder Display----");
-                bt.preorder(root);
-                break;
-                case 3:
-                System.out.println("Postorder Display----");
-                bt.postorder(root);
-                break;
-                case 4: 
-                System.out.println("Exiting the program");
-                check = false;
-                break;
-                default:
-                System.out.println("Exiting the program");
-            }
-        }
-        sc.close();
-        
-        
-        
-    }    
-}
 class binarytree{
     static Scanner sc = new Scanner(System.in);
     node create(){
@@ -112,3 +62,52 @@ class binarytree{
         System.out.println(root.data + "  ");
     }
 }
+
+public class binarytree1 {
+    
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        binarytree bt = new binarytree();
+        node root = bt.create(); // call the create method 
+        System.out.println("Binary tree in acesing order: ");
+        
+        int ch;
+        boolean check=true;
+        while(check){
+            
+            System.out.println("---------------------");
+            System.out.println("---Binary Tree Program---");
+            System.out.println("1.Inorder");
+            System.out.println("2.Preorder");
+            System.out.println("3.Postorder");
+            System.out.println("4.Exit");
+            
+            System.out.println("Enter the Choise: ");
+            ch = sc.nextInt();
+            System.out.println("----------------------");
+            
+            switch(ch){
+                case 1:
+                System.out.println("Inorder Display----");
+                bt.inorder(root);
+                break;
+                case 2:
+                System.out.println("Preorder Display----");
+                bt.preorder(root);
+                break;
+                case 3:
+                System.out.println("Postorder Display----");
+                bt.postorder(root);
+                break;
+                case 4: 
+                System.out.println("Exiting the program");
+                check = false;
+                break;
+                default:
+                System.out.println("Exiting the program");
+            }
+        }
+        sc.close();  
+    }    
+}
+
