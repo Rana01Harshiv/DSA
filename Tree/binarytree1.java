@@ -1,4 +1,4 @@
-
+package Tree;
 import java.util.Scanner;
 // inorder ( left- root- right )normal expression 
 // preorder (root - left -right)
